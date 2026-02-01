@@ -31,10 +31,6 @@ Open-source AI-powered interview platform. Self-host on your infrastructure.
 - Full transcript & recording
 - Self-hostable (own your data)
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=brijeshmarch16/openhire&type=Date)](https://star-history.com/#brijeshmarch16/openhire&Date)
-
 ## License
 
 Licensed under the [MIT license](https://github.com/brijeshmarch16/openhire/blob/main/LICENSE).
