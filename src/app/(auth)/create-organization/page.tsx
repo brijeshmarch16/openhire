@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Field, FieldDescription, FieldError, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { Text } from "@/components/ui/text";
 import { authClient } from "@/lib/auth-client";
 
 const formSchema = z.object({
@@ -64,6 +65,7 @@ export default function CreateOrganizationPage() {
           router.push("/signin");
           return;
         }
+
         setIsAuthenticated(true);
       } catch (error) {
         console.error("Auth check failed:", error);
@@ -206,13 +208,15 @@ export default function CreateOrganizationPage() {
       </CardHeader>
       <CardContent>
         {isCheckingAuth ? (
-          <div className="flex items-center justify-center py-12">
-            <Loader2 className="h-8 w-8 animate-spin text-gray-400" />
-            <span className="ml-2 text-gray-600 text-sm">Verifying authentication...</span>
+          <div className="flex items-center justify-center py-12 text-muted-foreground">
+            <Loader2 className="h-8 w-8 animate-spin" />
+            <Text as="small" className="ml-2">
+              Verifying authentication...
+            </Text>
           </div>
         ) : !isAuthenticated ? (
-          <div className="flex items-center justify-center py-12">
-            <p className="text-gray-600 text-sm">Redirecting to sign in...</p>
+          <div className="flex items-center justify-center py-12 text-muted-foreground">
+            <Text as="small">Redirecting to sign in...</Text>
           </div>
         ) : (
           <form onSubmit={form.handleSubmit(onSubmit)}>
