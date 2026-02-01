@@ -32,4 +32,5 @@ Open-source AI-powered interview platform. Self-host on your infrastructure.
 - Self-hostable (own your data)
 
 ## License
+
 Licensed under the [MIT license](https://github.com/brijeshmarch16/openhire/blob/main/LICENSE).
